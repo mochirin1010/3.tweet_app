@@ -1,0 +1,15 @@
+<div class="main users-main">
+  <% @users.each do |user| %>
+    <div class="user-box">
+      <div class="user-left">
+        <%=link_to("/users/#{user.id}") do %>
+          <img src="<%= "/user_images/#{user.image_name}" %>">
+        <% end %>
+      </div>
+      <div class="user-right">
+        <%=link_to(user.name, "/users/#{user.id}") %>
+      </div>
+     </div>
+   <% end %>
+   <%= paginate @users %>
+</div>

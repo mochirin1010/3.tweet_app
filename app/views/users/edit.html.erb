@@ -1,0 +1,27 @@
+<div class="main edit-main">
+  <div class="post-new">
+    <h1>編集する</h1>
+    <%= form_with url: "/users/#{@user.id}/update" do |f| %>
+      <div class="form">
+        <div class="form-body">
+          <% @user.errors.full_messages.each do |message| %>
+            <div class="form-error">
+              <%= message %>
+            </div>
+          <% end %>  
+
+           <%= f.label :名前 %>
+           <%= f.text_field :name, value: @user.name %><br>
+           <%= f.label :画像 %>
+           <%= f.file_field :image %><br>
+           <%= f.label :メール %>
+           <%= f.email_field :email, value: @user.email %><br>
+           <%= f.label :自己紹介%>
+           <p>150字まで</p>
+           <%= f.text_area :introduction, value: @user.introduction %><br>
+           <%= f.submit "変更" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,144 @@
+// index==================================
+.user-show-box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.user-index-box {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.user-index-box img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px #c1ced7;
+  object-fit: cover;
+}
+
+.user-index-box a {
+  display: block;
+  padding: 10px;
+}
+
+.post-box {
+  margin: 30px 15px;
+}
+
+.show-box img {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+}
+
+.show-box a {
+  display: block;
+}
+
+@media screen and (max-width: 700px) {
+  .post-box {
+    margin: 25px 0;
+  }
+
+  .show-box img {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+
+// show===================================
+.user-show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.user-show img {
+  width: 60px;
+  height: 60px;
+}
+
+.user-show a {
+  font-size: 1.4em;
+}
+
+.post-show-all {
+  text-align: center;
+}
+
+.show-content {
+  margin: 15px 0;
+  font-size: 1.5em;
+  font-weight: 100;
+}
+
+.post-time {
+  font-size: .8em;
+  margin: 10px 0;
+}
+
+.show-im-co img {
+  width: 400px;
+  height: 400px;
+}
+
+@media  screen and (max-width: 700px) {
+  .show-im-co img {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+
+// new========================================
+.post-new {
+  width: 70%;
+  margin: 30px auto;
+}
+
+.post-new h1 {
+  color: rgb(192, 149, 149);
+  font-size: 1.8em;
+}
+
+textarea {
+  width: 80%;
+  height: 150px;
+  border-radius: 10px;
+  margin: 25px 0;
+}
+
+@media  screen and (max-width: 700px) {
+  textarea {
+    width: 90%;
+    height: 100px;
+  }
+
+  .post-new input {
+    font-size: 0.7em;
+  }
+}
+
+
+// ハートアイコン===========================
+.like-btn {
+  color: #8899a6;
+}
+
+.like-btn-unlike {
+  color: #ff2581;
+}
+
+.post-show-box .fa {
+  font-size: 16px;
+  margin-right: 3px;
+}
+
+
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/

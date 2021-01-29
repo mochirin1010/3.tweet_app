@@ -1,0 +1,25 @@
+<div class="main users-new">
+  <div class="container">
+   <h1>ログイン</h1>
+    <div class="form users-form">
+      <div class="form-body">
+        <% if @error_message %>
+          <div class="form-error">
+            <%= @error_message %>
+          </div>
+        <% end %>
+        <%= form_with url: "/login" do |f| %>
+           <%= f.label :メールアドレス %>
+           <%= f.email_field :email, value: @email %><br>
+           <%= f.label :パスワード %>
+           <%= f.password_field :password, value: @password %><br>
+           <%= f.submit "ログイン" %>
+         <% end %>
+      </div>
+    </div>
+    <div class="login-new">
+      <span>アカウントをお持ちでないですか？</span>
+      <%= link_to("登録する", "/signup") %>
+    </div>
+  </div>
+</div>

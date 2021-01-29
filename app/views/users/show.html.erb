@@ -1,0 +1,37 @@
+<div class="main show-main">
+  <div class="container">
+    <div class="user">
+      <div class="user-show-left">
+        <img src="<%= "/user_images/#{@user.image_name}" %>">
+        <% if @user.id == @current_user.id %>
+          <div class="post_edit">
+            <%= link_to("編集", "/users/#{@user.id}/edit") %>
+          </div>
+        <% end %>
+      </div>
+      <div class="user-show-right">
+        <h2><%= @user.name %></h2>
+        <p><%= @user.email %></p>
+        <div class="show-introduction">
+          <%= @user.introduction %>
+        </div>
+      </div>
+    </div>
+
+    <ul class="user-tabs">
+      <li class="active"><%= link_to("投稿", "/users/#{@user.id}") %></li>
+      <li><%= link_to("いいね!", "/users/#{@user.id}/likes") %></li>
+    </ul>
+
+    <div class="user-show-box">
+      <% @user.posts.each do |post| %>
+        <div class="post-show">
+          <%= link_to("/posts/#{post.id}") do %>
+            <%= image_tag post.image_url if post.image? %>
+          <% end %>
+          <%= link_to(post.content, "/posts/#{post.id}") %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
